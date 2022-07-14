@@ -1,0 +1,24 @@
+body{
+    background-color: azure;
+    color: rgb(10, 10, 10);
+}
+
+  main {
+    position: fixed;
+    left: 0;
+    display: flex;
+  }
+
+  .bg {
+    height: 1000vh;
+    /* width: 3000vw; */
+  }
+
+  .scroll-image{
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    overflow-x: scroll;
+    /* overflow-y: scroll; */
+  }
+  
