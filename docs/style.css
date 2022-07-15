@@ -1,6 +1,7 @@
 body{
     background-color: azure;
     color: rgb(10, 10, 10);
+    margin: 0rem;
 }
 
   main {
@@ -10,7 +11,7 @@ body{
   }
 
   .bg {
-    height: 1000vh;
+    height: 5000vh;
     /* width: 3000vw; */
   }
 
@@ -20,5 +21,23 @@ body{
     width: 100vw;
     overflow-x: scroll;
     /* overflow-y: scroll; */
+  }
+
+  .fixed-image{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .fixed-image img{
+    width: 540px;
+    height: 820px;
+    object-fit: cover; 
+    width: 100vw;
+  }
+
+  .under-area{
+    position: relative;
+    margin: 0px;
   }
   
