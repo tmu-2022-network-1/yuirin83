@@ -5,39 +5,44 @@ body{
 }
 
   main {
-    position: fixed;
+    position: relative;
     left: 0;
     display: flex;
   }
 
   .bg {
-    height: 5000vh;
+    height: 50000vh;
     /* width: 3000vw; */
   }
 
   .scroll-image{
+    position: fixed;
+    z-index: 0;
     display: flex;
     flex: 1;
     width: 100vw;
     overflow-x: scroll;
-    /* overflow-y: scroll; */
   }
 
   .fixed-image{
+    z-index: 100;
     position: fixed;
     margin: 0px;
     padding: 0px;
   }
 
   .fixed-image img{
-    width: 540px;
-    height: 820px;
+    height: 1080px;
     object-fit: cover; 
     width: 100vw;
   }
 
-  .under-area{
-    position: relative;
-    margin: 0px;
+  .layer{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex: 1;
+    width: 100vw;
+    overflow-x: scroll;
   }
   

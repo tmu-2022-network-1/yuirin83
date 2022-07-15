@@ -11,7 +11,9 @@ for (const item of items) {
 
 function updateScroll(event) {
   const image = document.querySelector(".scroll-image");
-  image.scrollLeft = document.documentElement.scrollTop * 0.2;
+  const layer = document.querySelector(".layer");
+  image.scrollLeft = document.documentElement.scrollTop * 0.02;
+  layer.scrollLeft = document.documentElement.scrollTop * 0.7;
 }
 
 document.body.onscroll = updateScroll;
