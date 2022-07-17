@@ -1,0 +1,57 @@
+#scroll-content{
+  position:fixed;
+  top:0%;
+  left:13%;
+  transform:translate(-50%, -50%);
+  z-index:1;
+  text-align:center;
+  font-size:30px;
+}
+
+main {
+  position: absolute;
+  display: flex;
+}
+
+.bg {
+  height: 20000vh;
+}
+
+.scroll-image{
+  position: fixed;
+  top: 0vh;
+  z-index: 0;
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+.fixed-image{
+  z-index: 1000;
+  position: fixed;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+.fixed-image img{
+  height: 1080px;
+  object-fit: cover; 
+  width: 100vw;
+}
+
+.layer{
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+.mes {
+  position: fixed;
+  z-index: 9999999999;
+}
+

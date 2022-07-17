@@ -1,7 +1,7 @@
 let bgSpeed = 0
 let laySpeed = 0
-let bgSpeed_num = 0.0005;
-let laySpeed_num = 0.001;
+let bgSpeed_num = 0.0003;
+let laySpeed_num = 0.002;
 
 function updateScroll(event) {
   const image = document.querySelector('.scroll-image');
@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
       bgSpeed = bgSpeed_max;
       laySpeed = laySpeed_max;
     }
-  } else if (scroll > 5000) {
+  } else if (scroll > 5300) {
     bgSpeed += bgSpeed_num;
     laySpeed += laySpeed_num;
   } else {

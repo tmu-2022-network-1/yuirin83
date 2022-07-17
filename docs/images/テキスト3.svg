@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="_イヤー_4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1098 659.36"><defs><style>.cls-1{fill:#fff;font-family:STKaitiSC-Regular, 'Kaiti SC';font-size:36px;}.cls-2{letter-spacing:-.5em;}</style></defs><text class="cls-1" transform="translate(0 588.15)"><tspan x="0" y="0">なお、駅に停車したタイミングで下車していただくことが可能です</tspan><tspan class="cls-2" x="1080" y="0">。</tspan><tspan x="216" y="63">列車を降りると、このページを離れます</tspan><tspan class="cls-2" x="864" y="63">。</tspan></text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="_イヤー_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 1098 99.4" style="enable-background:new 0 0 1098 99.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{font-family:'STKaitiSC-Regular';}
+	.st2{font-size:36px;}
+	.st3{letter-spacing:-18;}
+</style>
+<g id="_イヤー_4">
+	<g transform="translate(0 588.15)">
+		<text transform="matrix(1 0 0 1 0 -558.9043)" class="st0 st1 st2">なお、駅に停車したタイミングで下車していただくことが可能です</text>
+		<text transform="matrix(1 0 0 1 1080 -558.9043)" class="st0 st1 st2 st3">。</text>
+		<text transform="matrix(1 0 0 1 216 -495.9043)" class="st0 st1 st2">列車を降りると、このページを離れます</text>
+		<text transform="matrix(1 0 0 1 864 -495.9043)" class="st0 st1 st2 st3">。</text>
+	</g>
+</g>
+</svg>
