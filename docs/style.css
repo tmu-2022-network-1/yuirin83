@@ -4,19 +4,55 @@ body{
     margin: 0rem;
 }
 
-  main {
+body::-webkit-scrollbar{
+  display: none;
+}
+
+#scroll-content{
+  position:fixed;
+  top:0%;
+  left:13%;
+  transform:translate(-50%, -50%);
+  z-index:1000;
+  text-align:center;
+  font-size:30px;
+}
+
+main {
+  position: relative;
+  left: 0;
+  display: flex;
+}
+
+  .title-image {
     position: relative;
-    left: 0;
-    display: flex;
+    width: 400px;
+    margin-top: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 10000;
+  }
+
+  #rail {
+    transform: scale(1.2);
+  }
+
+  #title-overlay {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 200%;
+    background: rgba(250, 184, 122, 0.3);
+    z-index: 9999;
   }
 
   .bg {
-    height: 50000vh;
-    /* width: 3000vw; */
+    height: 20000vh;
   }
 
   .scroll-image{
     position: fixed;
+    top: 5vh;
     z-index: 0;
     display: flex;
     flex: 1;
