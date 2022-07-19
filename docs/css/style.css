@@ -30,8 +30,7 @@ main {
 .fixed-image{
   z-index: 1000;
   position: fixed;
-  margin: 0px;
-  padding: 0px;
+  margin: 0 auto;
   height: 100vh;
 }
 
@@ -40,6 +39,17 @@ main {
   object-fit: cover; 
   width: 100vw;
 }
+
+/* .tonnel {
+  transition: opacity 1s, visibility 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tonnel.is-show {
+  opacity: 1;
+  visibility: visible;
+} */
 
 .layer{
   position: fixed;
