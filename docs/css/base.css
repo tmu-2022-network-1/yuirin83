@@ -1,13 +1,13 @@
 html {
-    font-size: 10px;
+  font-size: 10px;
   }
   
-  body{
-      background-color: azure;
-      color: rgb(10, 10, 10);
-      margin: 0rem;
-  }
-  
-  body::-webkit-scrollbar{
-    display: none;
-  }
+body{
+  background-color: azure;
+  color: rgb(10, 10, 10);
+  margin: 0rem;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}

@@ -40,6 +40,17 @@ main {
   width: 100vw;
 }
 
+.home {
+  position: relative;
+  top: 10vh;
+}
+
+.take-off {
+  position: fixed;
+  bottom: 20vh;
+  left: 48vw;
+}
+
 /* .tonnel {
   transition: opacity 1s, visibility 1s;
   opacity: 0;
