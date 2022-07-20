@@ -71,8 +71,8 @@ var observer = new MutationObserver(function () {
   }
   
   console.log(luxyScroll)
-  image.scrollLeft = luxyScroll * (1 + bgSpeed);
-  layer.scrollLeft = luxyScroll * (1 + laySpeed);
+  image.scrollLeft = luxyScroll * (1 + bgSpeed)*(1 + bgSpeed);
+  layer.scrollLeft = luxyScroll * (1 + laySpeed)*(1 + laySpeed);
   scrollNum.textContent = luxyScroll;
 
   if(luxyScroll > 5300){
