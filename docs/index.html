@@ -124,6 +124,7 @@
         <div class="mes">
           <p id="scroll-content">速度：<span id="scroll-num"></span></p>
           <!-- <button class="take-off">下車</button> -->
+          <input type="button" onclick="window.close();" value="ウィンドウを閉じる">
         </div>
 
       </main>
@@ -134,10 +135,10 @@
 
       <script src="./js/index.js" defer></script>
 
-      <script type="text/javascript" src="/docs/js/luxy.js" charset="utf-8"></script>
+      <script type="text/javascript" src="./js/luxy.js" charset="utf-8"></script>
       <script charset="utf-8">
         window.onload = function() {
-         luxy.init();
+         luxy.init({});
         }
         </script>  
     </body>

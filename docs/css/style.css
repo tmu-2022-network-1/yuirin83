@@ -1,7 +1,6 @@
 #scroll-content{
   position:fixed;
-  top:0%;
-  left:13%;
+
   transform:translate(-50%, -50%);
   z-index:1;
   text-align:center;
@@ -73,6 +72,8 @@ main {
 
 .mes {
   position: fixed;
+  top:0%;
+  left:13%;
   z-index: 9999999999;
 }
 
