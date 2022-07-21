@@ -18,34 +18,34 @@
     left: 0;
     top: 100vh;
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
     background: rgba(33, 33, 33, 0.9);
 }
 
 #overlay3 {
     position: absolute;
     left: 0;
-    top: 200vh;
+    top: 240vh;
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
     background: rgba(33, 33, 33, 0.8);
 }
 
 #overlay4 {
     position: absolute;
     left: 0;
-    top: 300vh;
+    top: 380vh;
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
     background: rgba(33, 33, 33, 0.7);
 }
 
 #overlay5 {
     position: absolute;
     left: 0;
-    top: 400vh;
+    top: 520vh;
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
     background: rgba(33, 33, 33, 0.6);
 }
 
@@ -84,7 +84,7 @@
 
 .box {
     margin: 0 auto;
-    height: 100vh;
+    height: 140vh;
     width: 500px;
 }
 
@@ -92,11 +92,7 @@
     padding: 100px 0px;
     position: -webkit-sticky;
     position: sticky;
-    top: 36vh;
-}
-
-#text4 {
-    top: 32vh;
+    top: 25vh;
 }
 
 

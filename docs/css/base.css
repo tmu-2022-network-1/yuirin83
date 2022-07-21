@@ -11,3 +11,11 @@ body{
 body::-webkit-scrollbar{
   display: none;
 }
+
+.layer::-webkit-scrollbar{
+  display: none;
+}
+
+.scroll-image::-webkit-scrollbar{
+  display: none;
+}
