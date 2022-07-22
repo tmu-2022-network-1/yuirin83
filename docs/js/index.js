@@ -58,7 +58,7 @@ var observer = new MutationObserver(function () {
   console.log(scrollDown);
 
 
-  if(luxyScroll * bgSpeed > 24000){
+  if(luxyScroll > 22000){
     appearGetOffButton();
   }else{
     disappearGetOffButton();
