@@ -5,14 +5,15 @@ let beforeY
 let correntY
 const image = document.querySelector('.scroll-image')
 const layer = document.querySelector('.layer')
+// const discription = document.querySelector('.layer')
+
+const scrollNum = document.getElementById('scroll-num')
 
 // function updateScroll(event) {
 //   image.scrollLeft = document.documentElement.scrollTop * bgSpeed
 //   layer.scrollLeft = document.documentElement.scrollTop * laySpeed
 // }
 // document.body.onscroll = updateScroll
-
-const scrollNum = document.getElementById('scroll-num')
 
 // window.addEventListener('scroll', function () {
 //   scrollNum.textContent = window.scrollY
@@ -75,12 +76,28 @@ var observer = new MutationObserver(function () {
   layer.scrollLeft = luxyScroll * laySpeed
   scrollNum.textContent = luxyScroll
 
-  if(luxyScroll > 5900){
-    // bgSpeed += 0.001
-    // laySpeed += 0.0015
+  if(luxyScroll > 6300){
+    // if(bgSpeed < 0.5){
+    //   bgSpeed += 0.0008
+    // }
+    // if(laySpeed < 0.75){
+    //   laySpeed += 0.0015
+    // }
+    bgSpeed = 1
+    laySpeed = 1
   }else{
-    bgSpeed = 0
-    laySpeed = 0
+    bgSpeed = 1
+    laySpeed = 1
+  }
+
+  if(luxyScroll > 26000){
+    appearGetOffButton();
+  }else{
+    disappearGetOffButton();
+  }
+
+  if(luxyScroll > 10000 && luxyScroll < 20000){
+    inTonnel();
   }
 })
 
@@ -88,3 +105,27 @@ const config = {
   attributes: true,
 }
 observer.observe(elem, config)
+
+
+function appearGetOffButton(){
+  document.getElementById("get-off").classList.remove("default");
+  document.getElementById("get-off").classList.add("appear");
+}
+
+function disappearGetOffButton(){
+  document.getElementById("get-off").classList.remove("appear");
+  document.getElementById("get-off").classList.add("default");
+}
+
+function GetOffTrain(){
+  document.getElementById("end-text").classList.add("active-text");
+  document.getElementById("left-door").classList.remove("left-pos");
+  document.getElementById("left-door").classList.add("activeLeft");
+  document.getElementById("right-door").classList.remove("right-pos");
+  document.getElementById("right-door").classList.add("activeRight");
+  document.getElementById("get-off").classList.add("hide");
+}
+
+function inTonnel(){
+  document.getElementById("dark").classList.add("inTonnel");
+}

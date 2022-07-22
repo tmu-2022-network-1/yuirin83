@@ -44,22 +44,14 @@ main {
   top: 10vh;
 }
 
-.take-off {
-  position: fixed;
-  bottom: 20vh;
-  left: 48vw;
+.tonnel {
+  /* opacity: 0; */
 }
 
-/* .tonnel {
-  transition: opacity 1s, visibility 1s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.tonnel.is-show {
+.inTonnel {
   opacity: 1;
-  visibility: visible;
-} */
+  transition: .2s;
+}
 
 .layer{
   position: fixed;

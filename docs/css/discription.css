@@ -19,7 +19,7 @@
     top: 100vh;
     width: 100vw;
     height: 140vh;
-    background: rgba(33, 33, 33, 0.9);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #overlay3 {
@@ -28,7 +28,7 @@
     top: 240vh;
     width: 100vw;
     height: 140vh;
-    background: rgba(33, 33, 33, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #overlay4 {
@@ -37,7 +37,7 @@
     top: 380vh;
     width: 100vw;
     height: 140vh;
-    background: rgba(33, 33, 33, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #overlay5 {
@@ -46,7 +46,7 @@
     top: 520vh;
     width: 100vw;
     height: 140vh;
-    background: rgba(33, 33, 33, 0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .outer {

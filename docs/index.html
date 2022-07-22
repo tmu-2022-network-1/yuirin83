@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/intro.css" />
     <link rel="stylesheet" href="./css/discription.css" />
+    <link rel="stylesheet" href="./css/end.css" />
+    <link rel="stylesheet" href="./css/button.css" />
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -19,6 +21,12 @@
     </header>
 
     <main>
+
+      <div class="end">
+        <img id="end-text" class="text-pos" src="images/endText.svg">
+        <div id="left-door" class="left-pos"></div>
+        <div id="right-door" class="right-pos"></div>
+      </div>
 
       <div class="bg-box">
         <div class="container">
@@ -62,7 +70,7 @@
         </div>
 
         <div class="fixed-image">
-          <!-- <img class="tonnel" src="images/inTonnnel.png"> -->
+          <img id="dark" class="tonnel" src="images/inTonnel.png">
           <img src="images/inTrain.png">
         </div>
 
@@ -123,8 +131,9 @@
 
         <div class="mes">
           <p id="scroll-content">速度：<span id="scroll-num"></span></p>
-          <button class="take-off" onclick="location.href='./fin.html'" >下車</button>
-          <!-- <input class="take-off type="button" onclick="location.href='./fin.html'" value="下車"> -->
+          <button id="get-off" class="button default" onclick="GetOffTrain()" >
+            <img src="images/getOffButton.png">
+          </button>
         </div>
 
       </main>

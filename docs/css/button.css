@@ -1,0 +1,39 @@
+.button {
+    position: fixed;
+    bottom: 20vh;
+    left: 50vw;
+    padding: 0;
+    border: none;
+    position: fixed;
+    bottom: 20vh;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translateX(-50%);
+  }
+  
+  .button img {
+    display: block;
+    width: 220px;
+  }
+  
+  button::-moz-focus-inner { /* for Firefox */
+    padding: 0;
+    border: none;
+    outline: 1px dotted #000;
+  }
+  
+  .default {
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  
+  .appear {
+    pointer-events: auto;
+    opacity: 1;
+    transition: 0.8s;
+  }
+  
+  .hide {
+    opacity: 0;
+    transition: .2s;
+  }
