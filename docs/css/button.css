@@ -24,16 +24,28 @@
   .default {
     pointer-events: none;
     opacity: 0;
-    transition: 0.2s;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
   }
   
   .appear {
     pointer-events: auto;
     opacity: 1;
-    transition: 0.8s;
+    transition-property: opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
   }
   
   .hide {
     opacity: 0;
     transition: .2s;
   }
+
+  #back-button {
+    position: fixed;
+    bottom: 10vh;
+  }
+

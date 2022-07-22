@@ -1,64 +1,10 @@
 let bgSpeed = 0
 let laySpeed = 0
 
-let beforeY
-let correntY
 const image = document.querySelector('.scroll-image')
 const layer = document.querySelector('.layer')
-// const discription = document.querySelector('.layer')
 
 const scrollNum = document.getElementById('scroll-num')
-
-// function updateScroll(event) {
-//   image.scrollLeft = document.documentElement.scrollTop * bgSpeed
-//   layer.scrollLeft = document.documentElement.scrollTop * laySpeed
-// }
-// document.body.onscroll = updateScroll
-
-// window.addEventListener('scroll', function () {
-//   scrollNum.textContent = window.scrollY
-//   let scroll = window.scrollY
-
-//   if (beforeY < scroll) {
-//     // if (scroll > 70000) {
-//     //   // if (bgSpeed > 0 && laySpeed > 0) {
-//     //   //   bgSpeed -= bgSpeed_num
-//     //   //   laySpeed -= laySpeed_num
-//     //   // }
-//     // } else if (scroll > 30000) {
-//     //   let isTop = Boolean(false)
-//     //   let bgSpeed_max
-//     //   let laySpeed_max
-//     //   if (!isTop) {
-//     //     bgSpeed_max = bgSpeed
-//     //     laySpeed_max = laySpeed
-//     //     bgSpeed = bgSpeed_max
-//     //     laySpeed = laySpeed_max
-//     //     isTop = Boolean(true)
-//     //   } else {
-//     //     bgSpeed = bgSpeed_max
-//     //     laySpeed = laySpeed_max
-//     //   }
-//     // } else
-//     if (scroll > 5300) {
-//       bgSpeed += bgSpeed_num
-//       laySpeed += laySpeed_num
-//     } else {
-//       bgSpeed = 0
-//       laySpeed = 0
-//     }
-//   }
-
-//   beforeY = window.pageYOffset
-//   // console.log(bgSpeed)
-
-//   var targetElement = document.getElementById('tonnel-entrance')
-//   var clientRect = targetElement.getBoundingClientRect()
-//   var x = clientRect.left
-
-//   if (x <= 350) {
-//   }
-// })
 
 let luxyScroll = 0;
 const elem = document.getElementById('luxy')
@@ -74,7 +20,7 @@ var observer = new MutationObserver(function () {
   console.log(luxyScroll)
   image.scrollLeft = luxyScroll * bgSpeed
   layer.scrollLeft = luxyScroll * laySpeed
-  scrollNum.textContent = luxyScroll
+  scrollNum.textContent = luxyScroll + "m"
 
   if(luxyScroll > 6300){
     // if(bgSpeed < 0.5){
@@ -96,8 +42,10 @@ var observer = new MutationObserver(function () {
     disappearGetOffButton();
   }
 
-  if(luxyScroll > 10000 && luxyScroll < 20000){
+  if(luxyScroll > 9600 && luxyScroll < 20000){
     inTonnel();
+  }else{
+    exitTonnel();
   }
 })
 
@@ -124,8 +72,24 @@ function GetOffTrain(){
   document.getElementById("right-door").classList.remove("right-pos");
   document.getElementById("right-door").classList.add("activeRight");
   document.getElementById("get-off").classList.add("hide");
+  document.getElementById("back-button").classList.add("appear");
 }
 
 function inTonnel(){
-  document.getElementById("dark").classList.add("inTonnel");
+  document.getElementById("nowTonnel").classList.add("inTonnel");
+}
+
+function exitTonnel(){
+  document.getElementById("nowTonnel").classList.remove("inTonnel");
+}
+
+function backToStart(){
+  document.getElementById("end-text").classList.remove("active-text");
+  document.getElementById("left-door").classList.add("left-pos");
+  document.getElementById("left-door").classList.remove("activeLeft");
+  document.getElementById("right-door").classList.add("right-pos");
+  document.getElementById("right-door").classList.remove("activeRight");
+  document.getElementById("get-off").classList.remove("hide");
+  document.documentElement.scrollTop = 0;
+  document.getElementById("back-button").classList.remove("appear");
 }

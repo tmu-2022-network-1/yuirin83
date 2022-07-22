@@ -45,12 +45,20 @@ main {
 }
 
 .tonnel {
-  /* opacity: 0; */
+  position: fixed;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 
 .inTonnel {
   opacity: 1;
-  transition: .2s;
+  transition-property: opacity;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 
 .layer{

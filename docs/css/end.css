@@ -5,10 +5,10 @@
 
 #end-text {
     position: fixed;
-    top: 40vh;
+    top: 50vh;
     left: 50vw;
     width: 50vw;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 9999999999999;
 }
 
@@ -16,7 +16,7 @@
     transform: translateY(-150%);
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 2.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-delay: 0s;
 }
