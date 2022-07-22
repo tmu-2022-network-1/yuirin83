@@ -1,6 +1,10 @@
 let bgSpeed = 0
 let laySpeed = 0
 
+let beforeY
+
+let scrollDown = new Boolean(true)
+
 const image = document.querySelector('.scroll-image')
 const layer = document.querySelector('.layer')
 
@@ -9,6 +13,8 @@ const scrollNum = document.getElementById('scroll-num')
 let luxyScroll = 0;
 const elem = document.getElementById('luxy')
 
+
+
 var observer = new MutationObserver(function () {
   const style = window.getComputedStyle(elem)
   const luxyCheck = style.getPropertyValue('transform')
@@ -16,42 +22,60 @@ var observer = new MutationObserver(function () {
   if(!luxyScroll){
     luxyScroll = 0
   }
-  
-  console.log(luxyScroll)
+
   image.scrollLeft = luxyScroll * bgSpeed
   layer.scrollLeft = luxyScroll * laySpeed
-  scrollNum.textContent = luxyScroll + "m"
+  scrollNum.textContent = luxyScroll * bgSpeed + "m"
 
-  if(luxyScroll > 6300){
-    // if(bgSpeed < 0.5){
-    //   bgSpeed += 0.0008
-    // }
-    // if(laySpeed < 0.75){
-    //   laySpeed += 0.0015
-    // }
-    bgSpeed = 1
-    laySpeed = 1
-  }else{
-    bgSpeed = 1
-    laySpeed = 1
+
+
+  let vector = luxyScroll - beforeY
+  if(vector > 0){
+    scrollDown = Boolean(true) //下方向へスクロール中
+  }else if(vector < 0){
+    scrollDown = Boolean(false) //上方向へスクロール中
   }
 
-  if(luxyScroll > 26000){
+  if(luxyScroll > 6300){
+    if(scrollDown){
+      bgSpeed += 0.0002
+      laySpeed += 0.0005
+    }
+    if(!scrollDown){
+      bgSpeed -= 0.0002
+      laySpeed -= 0.0005
+    }
+  }else{
+    bgSpeed = 0
+    laySpeed = 0
+  }
+
+  console.log(luxyScroll * bgSpeed);
+  console.log(scrollDown);
+
+
+  if(luxyScroll > 21000){
     appearGetOffButton();
   }else{
     disappearGetOffButton();
   }
 
-  if(luxyScroll > 9600 && luxyScroll < 20000){
+  if(luxyScroll * bgSpeed > 3800 && luxyScroll * bgSpeed < 9200){
     inTonnel();
   }else{
     exitTonnel();
   }
+  // if(luxyScroll * bgSpeed > 16000 && luxyScroll * bgSpeed < 20000){
+  //   inTonnel();
+  // }else{
+  //   exitTonnel();
+  // }
+
+  beforeY = luxyScroll;
 })
 
 const config = {
   attributes: true,
 }
 observer.observe(elem, config)
-
 
